@@ -1,0 +1,166 @@
+.selector-filter-input {
+   width: 180px;
+}
+
+.selector-filter-input::-ms-clear {
+    display: none;
+}
+.selector-popup {
+    position: absolute;
+    width: 300px;
+    z-index: 1000;
+
+    cursor: default;
+}
+
+.selector-popup.above {
+    bottom: -5px;
+    left: -2px;
+}
+
+.selector-popup.below {
+    top: -5px;
+    left: -2px;
+}
+
+.selector-popup-fixedposition {
+    width: 300px;
+}
+
+.selector-popup-inner {
+    border: 1px solid #5B718C;
+    padding: 5px;
+    height: 100%;
+    background-color: #FCFCFC;
+}
+
+.selector-popup h3 {
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 3px;
+}
+
+.selector-input-spacer {
+    border-right: 1px solid #5B718C;
+    border-left: 1px solid #5B718C;
+    position: relative;
+    background-color: #FCFCFC;
+}
+
+.selector-input-spacer.bottom {
+    border-bottom: 1px solid #5B718C;
+    top: -1px;
+    height: 33px;
+}
+
+.selector-input-spacer.top {
+    border-top: 1px solid #5B718C;
+    top: 1px;
+    height: 34px;
+}
+
+.selector-options {
+    overflow: auto;
+    max-height: 300px;
+}
+
+.selector-options h3 {
+    padding: 7px 0 4px 0;
+}
+
+.selector-favourites {
+    border-bottom: 1px dotted #5B718C;
+}
+
+.selector-favourites, .selector-all {
+    padding: 0 0 9px 0;
+}
+
+.selector-filters {
+    width: 100%;
+    border-bottom: 1px dotted #5B718C;
+    padding: 0 0 9px 0;
+    table-layout: fixed;
+}
+
+.selector-filter-button {
+    border: 1px solid #5B718C;
+    padding: 3px 4px;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: #F0F0F0;
+    cursor: pointer;
+}
+
+.selector-filter-button:hover {
+    background-color: #A3B1C1;
+}
+
+.selector-filter-button.checked {
+    background-color: #607799;
+}
+
+.selector-favourites .selector-star {
+    background-image: url("/images/selectors/star.png");
+}
+
+.selector-favourites .selector-selected .selector-star,
+.selector-all .selector-item:hover .selector-star {
+    background-image: url("/images/selectors/star-white.png");
+}
+
+.selector-folder-closed div {
+    display: none;
+}
+
+.selector-folder-open h3 {
+    background-image: url("/images/selectors/fold-open.png");
+    background-position: 0 57%;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.selector-folder-closed h3 {
+    background-image: url("/images/selectors/fold-closed.png");
+    background-position: 0 57%;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.selector-folder-disabled h3 {
+    background-image: none !important;
+    padding-left: 10px;
+    color: #606060;
+}
+
+.selector-folder-disabled .selector-all,
+.selector-folder-disabled .selector-favourites {
+    padding-bottom: 2px;
+}
+
+.selector-star {
+    background: no-repeat center;
+    width: 20px;
+    display: inline-block;
+}
+
+.selector-item {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.selector-item, .selector-item * {
+    font-size: 13px !important;
+}
+
+.selector-item b {
+    font-weight: bold !important;
+}
+
+.selector-selected {
+    background-color: #607799 !important;
+    color: #FFFFFF;
+}

@@ -1,0 +1,31 @@
+.uir-popup
+{
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.6);
+}
+
+.uir-popup-header
+{
+    height:30px;
+}
+
+.uir-popup-header *
+{
+    color: white;
+}
+
+.uir-popup-body
+{
+    background: #fafafa;
+    text-align: center;
+}
+
+.uir-popup-body *
+{
+    color: #333333 !important;
+}
+
+.uir-timeout button
+{
+    color: white !important;
+}

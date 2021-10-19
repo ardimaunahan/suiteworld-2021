@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_swd_sl_method4">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>Suite World 2021 - Method 4</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.netsuite.sw2021/method4/SD_SL_Method4.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_swd_sl_method4">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>Suite World 2021 - Method 4</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

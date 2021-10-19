@@ -1,0 +1,11 @@
+<!-- This file is used for overwriting or preserving the objects in your SuiteApp when deploying to a NetSuite account. -->
+<!-- The configuration below overwrites all objects except for the objects specified with the action tag PRESERVE. -->
+<!-- This configuration is only applied when the "Apply Installation Preferences" option is provided through SuiteCloud SDK. Otherwise this file is ignored. -->
+<!-- For more information, see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_160751417871.html -->
+
+<preference type="OVERWRITING">
+<!--    <scriptdeployments defaultAction="OVERWRITE"> -->
+<!--        <scriptdeployment scriptid="customscript_myscript.customdeploy_myscriptdeployment1" action="PRESERVE"/> -->
+<!--        <scriptdeployment scriptid="customscript_myscript.customdeploy_myscriptdeployment2" action="PRESERVE"/> -->
+<!--    </scriptdeployments> -->
+</preference>

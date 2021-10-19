@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory_swd_cen_cat_demo">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_swd_classic_cen]</centertab>
+  <label>Demo</label>
+  <links>
+    <link>
+      <linklabel>Method 1</linklabel>
+      <linkobject>[scriptid=customscript_swd_sl_method1.customdeploy_swd_sl_method1]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Method 2</linklabel>
+      <linkobject>[scriptid=customscript_swd_sl_method2.customdeploy_swd_sl_method2]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Method 3</linklabel>
+      <linkobject>[scriptid=customscript_swd_sl_method3.customdeploy_swd_sl_method3]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Method 4</linklabel>
+      <linkobject>[scriptid=customscript_swd_sl_method4.customdeploy_swd_sl_method4]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Bonus</linklabel>
+      <linkobject>[scriptid=customscript_swd_sl_bonus.customdeploy_swd_sl_bonus]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

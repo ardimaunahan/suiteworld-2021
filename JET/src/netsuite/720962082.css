@@ -1,0 +1,175 @@
+.ns-menu
+{
+    background: #F7F7F7;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+    z-index: 10000;
+}
+.ns-menubar:focus
+{
+    outline: none;
+}
+#ns_navigation > .ns-menu
+{
+    box-shadow: none;
+}
+.ns-submenu
+{
+    position: relative;
+}
+.ns-menuitem
+{
+    vertical-align: middle;
+	list-style: none;
+}
+.ns-scroll-button-li {
+	list-style: none;
+}
+.ns-menuitem > a
+{
+    color: #333333;
+    font-size: 14px;
+    font-weight: normal;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 8px 0 8px;
+    text-align: left;
+    text-decoration: none;
+    background: #F7F7F7;
+    outline: none;
+}
+
+.ns-menusimpleseparator a
+{
+    height: 1px;
+}
+
+#ns_navigation .ns-header > a
+{
+    font-weight: bold;
+}
+.ns-menuitem.ns-submenu > a
+{
+    padding: 0 45px 0 8px;
+}
+.page-title-menu .ns-menuitem.ns-submenu > a
+{
+    padding: 0 8px;
+}
+
+.ns-menuheader > a
+{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.ns-submenu-triangle
+{
+    color: #BFBFBF;
+    display: inline-block;
+    position: absolute;
+    right: 11px;
+    font-size: 10px;
+    top: 12px;
+    cursor: pointer;
+}
+.ns-active > .ns-submenu-triangle
+{
+    color: #FFFFFF;
+}
+
+.ns-menu li.ns-menuitem a:not([href]),
+.ns-menu li.ns-menuitem a:not([href]) + .ns-submenu-triangle
+{
+    cursor: default;
+}
+
+.ns-scroll-button
+{
+    text-align: center !important;
+    color: #999999 !important;
+    background: #F7F7F7 !important;
+    font-size: 10px;
+    height: 37px !important;
+    line-height: 34px !important;
+    display: block;
+    text-decoration: none;
+    z-index: 10001;
+}
+.ns-scroll-button:hover
+{
+    color: #FFFFFF !important;
+}
+.ns-scroll-button-disabled
+{
+    display: none;
+}
+
+/* User menu */
+.ns-user > div
+{
+    cursor: pointer;
+}
+.ns-user.ns-active
+{
+    color: #FFFFFF;
+}
+.ns-user.ns-active .ns-role span
+{
+    color: #FFFFFF !important;
+}
+.ns-user .ns-menu
+{
+    position: fixed;
+}
+#spn_cRR_d1
+{
+    display: block;
+}
+
+
+#ns-header-quick-menu .ns-menu .uir-menuitem-personalize
+{
+    border-top: 1px solid #E5E5E5;
+}
+.ns-user .ns-menu .uir-menuitem-signout .icon-signout
+{
+    display: inline-block;
+    width: 11px;
+    height: 17px;
+    float: right;
+    margin-top: 8px;
+    background-image: url('/uirefresh/img/header/icon_lock_default.png');
+}
+.ns-user .ns-menu .uir-menuitem-signout:hover .icon-signout
+{
+    background-image: url('/uirefresh/img/header/icon_lock_over.png');
+}
+
+
+/* Special menu items */
+.uir-menu-home > li > a,
+.uir-menu-recent > li > a,
+.uir-menu-shortcuts > li > a
+{
+    min-width: 50px;
+    background-size: 22px 20px !important;
+    background-repeat: no-repeat !important;
+    background-position: 15px 8px !important;
+}
+.uir-menu-home > li > a > img,
+.uir-menu-shortcuts > li > a > img,
+.uir-menu-recent > li > a > img
+{
+    position: relative;
+    top: 4px;
+    left: 7px;
+    width: 22px;
+    height: 20px;
+}
+
+/* Header item active*/
+#ns_navigation > .ns-menu > .ns-menuitem > a
+{
+    background: transparent;
+}
+

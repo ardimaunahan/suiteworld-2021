@@ -1,0 +1,154 @@
+/*!
+ * Override default Ext theming
+ */
+
+/*  Tip overrides  */
+
+.x-tip-anchor {
+    background-image:url(../images/override/qtip/tip-anchor-sprite.gif);
+}
+
+.x-tip .x-tip-tc, .x-tip .x-tip-tl, .x-tip .x-tip-tr, .x-tip .x-tip-bc, .x-tip .x-tip-bl, .x-tip .x-tip-br, .x-tip .x-tip-ml, .x-tip .x-tip-mr {
+	background-image: url(../images/override/qtip/tip-sprite.gif) !important;
+}
+
+.x-tip .x-tip-ml {
+	padding-left:1px !important;
+
+}
+
+.x-tip .x-tip-mr {
+	padding-right:1px !important;
+}
+
+.x-tip .x-tip-tc{
+    padding-top:1px !important;
+}
+
+.x-tip-anchor-left {
+    background-position: -28px 0;
+    width: 10px;
+}
+
+/* End of tip override */
+
+/* override Ext CSS Resets for certain elements so that HTML can be previewed correctly */
+
+.inputreadonly ul, .inputreadonly ol {
+    display: block;
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.inputreadonly ul {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:disc;
+}
+
+.inputreadonly ol {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:decimal;
+}
+
+.inputreadonly li {
+    display: list-item;
+}
+
+.inputreadonly blockquote {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.bgltmedtext ul, .bgltmedtext ol {
+    display: block;
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bgltmedtext ul {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:disc;
+}
+
+.bgltmedtext ol {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:decimal;
+}
+
+.bgltmedtext li {
+    display: list-item;
+}
+
+.bgltmedtext blockquote {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.text ul, .text ol {
+    display: block;
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text ul {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:disc;
+}
+
+.text ol {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:decimal;
+}
+
+.text li {
+    display: list-item;
+}
+
+.text blockquote {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.portlettext strong {
+font-weight: bold;
+}
+
+/*
+.portlettext ul, .portlettext ol {
+    display: block;
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.portlettext ul {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:disc;
+}
+
+.portlettext ol {
+    list-style-image: none;
+    list-style-position:outside;
+    list-style-type:decimal;
+}
+
+.portlettext li {
+    display: list-item;
+}
+
+.portlettext blockquote {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+*/
+/* End of Ext CSS Reset overrides */

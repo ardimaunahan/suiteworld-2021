@@ -1,0 +1,14 @@
+<manifest projecttype="SUITEAPP">
+  <publisherid>com.netsuite</publisherid>
+  <projectid>sw2021</projectid>
+  <projectname>SuiteWorld 2021 Demo (Superpowers for Your SuiteApps How to Use Open Source Libraries)</projectname>
+  <projectversion>1.0.0</projectversion>
+  <frameworkversion>1.0</frameworkversion>
+  <dependencies>
+    <features>
+      <feature required="true">SERVERSIDESCRIPTING</feature>
+      <feature required="false">CRM</feature>
+      <feature required="true">CUSTOMRECORDS</feature>
+    </features>
+  </dependencies>
+</manifest>

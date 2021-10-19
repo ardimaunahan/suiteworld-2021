@@ -1,0 +1,411 @@
+@media screen {
+
+#ns_header * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.ns-icon {
+    display: inline-block;
+    width: 22px;
+    height: 32px;
+}
+
+.ns-menu {
+    display: none;
+}
+.ns-menu > .ns-spacer {
+    display: table-cell;
+    min-width: 32px;
+}
+.ns-menuitem {
+    white-space: nowrap;
+}
+.ns-menuitem a {
+    display: block;
+}
+.ns-menu.ns-active {
+    display: block;
+}
+
+#div__header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    transition: box-shadow .1s linear;
+}
+#div__header.ns-shadow {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
+}
+#div__header + * {
+    margin-top: 90px !important;
+}
+
+#ns_header {
+    padding: 0 25px;
+    background-color: #FFFFFF;
+}
+
+#ns_header > * {
+    display: table-cell;
+}
+
+
+#ns_header .ns-divider {
+    padding: 0 0;
+}
+#ns_header .ns-divider > div {
+    width: 100%;
+    min-width: 1px;
+    height: 42px;
+    margin: 5px 0;
+    background-color: #E5E5E5;
+}
+
+#ns_header .ns-divider > div.ns-transparent {
+    background-color: transparent;
+}
+
+#ns_header .ns-search {
+    width: 100%;
+    padding: 11px 30px;
+    vertical-align: top;
+    white-space: nowrap;
+    text-align: center;
+}
+#ns_header .ns-search > div {
+    display: table;
+    width: 100%;
+    max-width: 550px;
+    min-width: 100px;
+}
+#ns_header .ns-search > div > div {
+    display: table-row;
+}
+#ns_header .ns-search > div > div > * {
+    display: table-cell;
+}
+#ns_header .ns-search input {
+    width: 100%;
+    height: 30px;
+    min-width: 100px;
+    max-width: 550px;
+    border: 1px solid #CCCCCC;
+    color: #666666;
+    background: url('/images/icon_search_gray.png') right 50% no-repeat;
+    font-size: 14px;
+    margin: 0;
+    padding: 0.266rem 2rem 0.266rem 0.266rem;
+}
+#ns_header .ns-search .ns-menu {
+    display: table;
+    border-collapse: collapse;
+}
+#ns_header .ns-search .ns-menuitem {
+    display: table-row;
+}
+#ns_header .ns-search .ns-menuitem span {
+    display: table-cell;
+    padding: 0 10px;
+}
+
+#ns-header-quick-menu + .ns-divider,
+#ns_header .ns-help + .ns-divider
+{
+    padding: 0;
+}
+
+#ns-header-quick-menu {
+    vertical-align: top;
+    cursor: pointer;
+}
+#ns-header-quick-menu .ns-icon {
+    display: block;
+    background: transparent url('/uirefresh/img/header/icon_new_gray.png') no-repeat 50% 50%;
+    width: 52px;
+    height: 52px;
+}
+#ns-header-quick-menu .ns-menu {
+    position: fixed;
+}
+#ns-header-quick-menu.ns-active
+{
+    color: #FFFFFF;
+}
+
+#ns-header-quick-menu.ns-active .ns-icon
+{
+    background-image: url('/uirefresh/img/header/icon_new_white.png');
+}
+
+#ns_header .ns-help
+{
+    display: block;
+    vertical-align: top;
+    padding: 10px;
+    white-space: nowrap;
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #666666!important;
+}
+#ns_header .ns-help:hover,
+#ns_header .ns-help:focus
+{
+    color: #FFFFFF;
+}
+#ns_header .ns-help .ns-icon
+{
+    background: transparent url('/uirefresh/img/header/icon_help_gray.png') no-repeat 50% 50%;
+    margin-right: 6px;
+}
+#ns_header .ns-help:hover .ns-icon,
+#ns_header .ns-help:focus .ns-icon
+{
+    background-image: url('/uirefresh/img/header/icon_help_white.png');
+}
+#ns_header .ns-help div
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+#ns_header .ns-user
+{
+    white-space: nowrap;
+    cursor: default;
+    vertical-align: middle;
+}
+#ns_header .ns-user > .ns-header > a
+{
+    background: none;
+    cursor: pointer;
+    height: 52px;
+    line-height: 52px;
+}
+#ns_header .ns-user .ns-role
+{
+    display: inline-block;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+}
+#ns_header .ns-user .ns-role > span:first-of-type
+{
+    display: block;
+    font-size: 13px;
+    line-height: 13px;
+}
+#ns_header .ns-user .ns-role > span:last-of-type
+{
+    display: block;
+    font-size: 11px;
+    line-height: 11px;
+}
+#ns_header .ns-user .ns-icon {
+    background: transparent url('/uirefresh/img/header/icon_user_gray.png') no-repeat 50% 50%;
+    width: 38px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#ns_header .ns-user.ns-active .ns-icon {
+    background: transparent url('/uirefresh/img/header/icon_user_white.png') no-repeat 50% 50%;
+    width: 38px;
+}
+#ns_header .ns-header-item-container
+{
+    vertical-align: middle;
+}
+#ns_header .ns-header-item-container > div
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#ns_navigation {
+    padding: 0 25px 0 25px;
+    min-width: 300px;
+    min-height: 38px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+    display: flex;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+
+}
+#ns_navigation .ns-menu {
+    position: fixed;
+    z-index: 1100;
+}
+
+#ns_navigation > .ns-menu {
+    position: static;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+	-ms-flex-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+    color: #FFFFFF;
+    background-color: transparent;
+    z-index: auto;
+}
+#ns_navigation > .ns-menu > .ns-menuitem {
+    display: inline-block;
+    height: 38px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+	-ms-flex-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
+#ns_navigation > .ns-menu > .ns-menuitem.ns-selected {
+    background-color: #313F56;
+}
+#ns_navigation > .ns-menu > .ns-menuitem > *:first-child {
+    padding: 0 8px;
+}
+#ns_navigation .ns-menuitem .ns-icon {
+    height: auto;
+}
+#ns_navigation .ns-menuitem .ns-home {
+    background: transparent url('/images/icon_home_white.png') no-repeat 50% 50%;
+}
+#ns_navigation .ns-menuitem .ns-recent {
+    background: transparent url('/images/icon_history_white.png') no-repeat 50% 50%;
+}
+#ns_navigation .ns-menuitem .ns-shortcut {
+    background: transparent url('/images/icon_favorites_white.png') no-repeat 50% 50%;
+}
+#ns_navigation > .ns-menu-overflow {
+    visibility: hidden;
+    position: absolute;
+    right: 25px;
+}
+#ns_navigation.overflown {
+    padding-right: 66px;
+}
+#ns_navigation.overflown .ns-menu-overflow {
+    visibility: visible;
+}
+.ns-menu-overflow > li > a
+{
+    font-size: 180%;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: 'Times New Roman', serif;
+}
+
+.ns-help, .ns-role
+{
+    color: #666666;
+    outline: none;
+}
+
+#ns_header #devpgloadtime {
+    padding-right: 30px;
+}
+
+#ns_header #devpgloadtime img{
+	max-width: 212px;
+}
+
+#ns_header .ns-logo {
+    vertical-align: middle;
+	line-height: 0;
+}
+
+#ns_header .ns-logo img {
+    max-height: 30px;
+    max-width: 144px;
+}
+
+/*   GLOBAL SEARCH */
+ul#uir-global-search-container > li
+{
+    background: #F7F7F7;
+    list-style: none;
+    padding: 0 8px;
+    height: 34px;
+}
+ul#uir-global-search-container > li a
+{
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333333;
+    height: 34px;
+    line-height: 34px;
+    overflow: hidden;
+}
+ul#uir-global-search-container > li a span
+{
+    font-weight: bold;
+}
+ul#uir-global-search-container > li a + a
+{
+    visibility: hidden;
+}
+ul#uir-global-search-container > li.ns-active a + a
+{
+    visibility: visible;
+}
+ul#uir-global-search-container a.uir-item-view:hover
+{
+    text-decoration: none !important;
+}
+ul#uir-global-search-container > li.uir-global-search-item a.uir-item-view
+{
+    width: calc(100% - 50px);
+}
+ul#uir-global-search-container > li.uir-global-search-dashboard-item a.uir-item-view
+{
+    width: calc(100% - 50px - 50px);
+}
+ul#uir-global-search-container > li a + a
+{
+    width: 50px !important;
+    text-align: center;
+}
+
+ul#uir-global-search-container > li.ns-active a
+{
+    color: #FFFFFF;
+}
+ul#uir-global-search-container > li.ns-active a:hover
+{
+    text-decoration: underline;
+}
+
+ul#uir-global-search-container > li > a.uir-global-search-more
+{
+    display: block;
+    text-align: center;
+}
+
+ul#uir-global-search-container > li.uir-global-search-item-noresults
+{
+    line-height:34px;
+    background: #F7F7F7;
+    color: #333333;
+}
+
+.uir-global-search-item-active-suboption
+{
+    background-color: #8cb4db;
+}
+
+}

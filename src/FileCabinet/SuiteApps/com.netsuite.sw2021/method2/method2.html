@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+            integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+            crossorigin="anonymous"
+        />
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style>
+            [ng\:cloak],
+            [ng-cloak],
+            [data-ng-cloak],
+            [x-ng-cloak],
+            .ng-cloak,
+            .x-ng-cloak {
+                display: none !important;
+            }
+            .list-group.sd-my-list-group{
+                list-style: none;
+                margin-top: 20px;
+                margin-left: 0px;
+            }
+            .list-group .sd-f14{
+                font-size:14px
+            }
+        </style>
+        <title>Method 2</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <ul class="nav nav-tabs" style="margin: 0px">
+                <li role="presentation" class="active">
+                    <a href="#angularjs_app" data-toggle="tab">Angularjs <i class="fab fa-angular" style="color:#e23237"></i></a>
+                </li>
+                <li role="presentation">
+                    <a href="#react_app_container" data-toggle="tab">React <i class="fab fa-react" style="color: #61dafb"></i></a>
+                </li>
+                <li role="presentation"><a href="#vuejs_app" data-toggle="tab">Vuejs <i class="fab fa-vuejs" style="color: #41b883"></i></a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="angularjs_app">
+                    <div id="ang_app" class="row">
+                        <div class="col-md-4">
+                        <h2>To-Do List By <i class="fab fa-angular" style="color:#e23237"></i></h2>
+                        <div ng-controller="TodoController as ctrl" id="apptemplateng">
+                            <form ng-submit="ctrl.addTodo($event)">
+                                <div class="form-inline">
+                                <input ng-model="ctrl.todo" class="form-control" />
+                                <button type="submit" ng-click="ctrl.addTodo($event)" class="btn btn-primary">Add</button>
+                                </div>
+                                <ul ng-cloak class="list-group sd-my-list-group">
+                                    <li class="list-group-item" ng-repeat="todo in ctrl.todos">
+                                        <span class="badge">Todo</span>
+                                        <span ng-bind="todo.name" class="sd-f14"></span>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="react_app_container">
+                    <div id="react_app_con" class="row">
+                        <div class="col-md-4">
+                        <h2>To-Do List By <i class="fab fa-react" style="color: #61dafb"></i></h2>
+                        <div id="react_app"></div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="vuejs_app">
+                    <style></style>
+                    <div id="vue_app" class="row">
+                        <div class="col-md-4">
+                        <h2>To-Do List By <i class="fab fa-vuejs" style="color: #41b883"></i></h2>
+                        <div>
+                            <form v-on:submit="addTodo">
+                                <div class="form-inline">
+                                <input v-model="todo" class="form-control" />
+                                <button type="submit" v-on:click.prevent="addTodo" class="btn btn-primary">Add</button>
+                                </div>
+                            </form>
+                            <ul  class="list-group sd-my-list-group">
+                                <li class="list-group-item" v-for="todo in todos">
+                                    <span class="badge">Todo</span>
+                                    <span class="sd-f14">{{todo.name}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Latest compiled and minified JavaScript -->
+        <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+        <!-- Don't use this in production: -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script type="text/javascript" defer>
+            class Todo {
+                name;
+                done;
+                constructor(name) {
+                    this.name = name;
+                    this.done = false;
+                }
+            }
+
+            window.sddemo ={angularTodos:[],reactTodos:[],vueJsTodos:[]};
+        </script>
+
+        <script type="text/javascript" defer>
+
+            let app = angular.module('todoApp', []);
+            app.controller('TodoController', [
+                function () {
+                    let self = this;
+                    self.todos = [new Todo('Create prototype'),new Todo('Prepare for Presentation')];
+                    self.todo = '';
+                    self.addTodo = function ($event) {
+                        $event.stopPropagation();
+                        $event.preventDefault();
+                        if (self.todo) {
+                            this.todos.push(new Todo(self.todo));
+                            window.sddemo.angularTodos = this.todos.slice();
+                            self.todo = '';
+                        }
+                    };
+                }
+            ]);
+
+            angular.element(function () {
+                angular.bootstrap(document.getElementById('ang_app'), ['todoApp']);
+            });
+        </script>
+
+        <script type="text/babel" defer>
+            let todos = [new Todo('Create prototype'),new Todo('Prepare for Presentation')];
+
+            function TodoApp({todos}) {
+                const todoRef = React.useRef('');
+                const [todosList, setTodos] = React.useState(todos);
+                function addTodo(e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    console.log('event target', e);
+
+                    let todoValue = todoRef.current.value;
+                    if (todoValue) {
+                        setTodos(todosList.concat(new Todo(todoValue)));
+                        todoRef.current.value = '';
+                    }
+                }
+                return (
+                    <React.Fragment>
+                        <form onSubmit={addTodo}>
+                            <div className="form-inline">
+                            <input  id="todo" ref={todoRef} className="form-control" />
+                            <button type="submit" className="btn btn-primary">Add</button>
+                            </div>
+                        </form>
+                        <ul className="list-group sd-my-list-group">
+                            {todosList.map((todo, i) => {
+                                return <li className="list-group-item" key={i}>
+                                    <span className="badge">Todo</span>
+                                    <span className="sd-f14">{todo.name}</span>
+                                </li>;
+                            })}
+                        </ul>
+                    </React.Fragment>
+                );
+            }
+            ReactDOM.render(<TodoApp todos={todos} />, document.getElementById('react_app'));
+        </script>
+
+        <script type="text/javascript" defer>
+            let vueApp = new Vue({
+                el: '#vue_app',
+                data: {
+                    todo: '',
+                    todos: [new Todo('Create prototype'),new Todo('Prepare for Presentation')]
+                },
+                methods: {
+                    addTodo: function (event) {
+                        event.stopPropagation();
+                        event.preventDefault();
+                        if (vueApp.todo) {
+                            vueApp.todos.push(new Todo(vueApp.todo));
+                            vueApp.todo = '';
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

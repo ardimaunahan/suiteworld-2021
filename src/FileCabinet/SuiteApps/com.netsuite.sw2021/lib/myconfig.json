@@ -1,0 +1,7 @@
+{
+  "paths": {
+    "danfo": "/SuiteApps/com.netsuite.sw2021/lib/danfo.js",
+    "moment": "/SuiteApps/com.netsuite.sw2021/lib/moment.min.js",
+    "Plotly": "/SuiteApps/com.netsuite.sw2021/lib/plotly-2.2.0.min.js"
+  }
+}

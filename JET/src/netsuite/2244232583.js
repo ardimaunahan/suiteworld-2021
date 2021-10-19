@@ -1,0 +1,2 @@
+var NS=window.NS||{};NS.UI=NS.UI||{};NS.UI.Messaging=NS.UI.Messaging||{};(function(a){a.Type=Object.freeze({CONFIRMATION:0,INFORMATION:1,WARNING:2,ERROR:3});a.Message=function(){};a.Alert=function(){};a.Confirm=function(){};a.Dialog=function(){};a.Button=function(){}})(NS.UI.Messaging);
+//# sourceMappingURL=/assets/ui_messaging_api/2244232583.map

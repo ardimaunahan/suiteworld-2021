@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="{{EXTERNAL_BASE_URL}}/method4/resources/css/redwood/11.0.2/web/oj-redwood-notag-min.css" id="css" />
+
+<!-- JET HTML: Start -->
+
+<div id='chart-container'>
+
+    <div style="margin-bottom: 30px">from <a href="https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=chart&demo=filtering" target="_blank">JET Cookbook's Chart sample</a></div>
+
+    <oj-legend
+      id="legend1"
+      class="demo-filtering-legend-height"
+      aria-controls="barChart1 bubbleChart barChart2 areaChart pieChart funnelChart"
+      orientation="horizontal"
+      data="[[legendDataProvider]]"
+      halign="center"
+      hidden-categories="{{hiddenCategoriesValue}}"
+      hide-and-show-behavior="on">
+        <template slot="itemTemplate">
+            <oj-legend-item
+              text="[[$current.data.series]]"
+              color="[[colorHandler.getValue($current.data.series)]]"
+              short-desc="[['Filter: ' + $current.data.series]]"
+              categories="[[[$current.data.series]]]">
+            </oj-legend-item>
+        </template>
+    </oj-legend>
+
+    <div class="oj-sm-odd-cols-12 oj-md-odd-cols-6">
+        <div class="oj-flex">
+            <oj-chart
+              id="barChart"
+              class="oj-flex-item"
+              type="bar"
+              data="[[singleGroupDataProvider]]"
+              animation-on-display="auto"
+              animation-on-data-change="auto"
+              hidden-categories="{{hiddenCategoriesValue}}"
+              legend.rendered="off">
+                <template slot="itemTemplate" data-oj-as="item">
+                    <oj-chart-item
+                      value="[[item.data.value]]"
+                      categories="[[ [item.data.series] ]]"
+                      color="[[colorHandler.getValue(item.data.series)]]"
+                      group-id="[[ [item.data.group] ]]"
+                      series-id="[[item.data.series]]">
+                    </oj-chart-item>
+                </template>
+            </oj-chart>
+
+            <oj-chart
+              id="bubbleChart"
+              type="bubble"
+              class="oj-flex-item"
+              data="[[bubbleDataProvider]]"
+              animation-on-display="auto"
+              animation-on-data-change="auto"
+              hidden-categories="{{hiddenCategoriesValue}}"
+              legend.rendered="off">
+                <template slot="itemTemplate" data-oj-as="item">
+                    <oj-chart-item
+                      x="[[item.data.x]]"
+                      y="[[item.data.y]]"
+                      z="[[item.data.z]]"
+                      group-id="[[ [item.data.group] ]]"
+                      categories="[[ [item.data.series] ]]"
+                      series-id="[[item.data.series]]">
+                    </oj-chart-item>
+                </template>
+            </oj-chart>
+        </div>
+        <div class="oj-flex">
+
+            <oj-chart
+              id="barChart2"
+              type="bar"
+              class="oj-flex-item"
+              data="[[timeSeriesDataProvider]]"
+              animation-on-display="auto"
+              animation-on-data-change="auto"
+              hidden-categories="{{hiddenCategoriesValue}}"
+              legend.rendered="off">
+                <template slot="itemTemplate" data-oj-as="item">
+                    <oj-chart-item
+                      value="[[item.data.value]]"
+                      categories="[[ [item.data.series] ]]"
+                      group-id="[[ [item.data.group] ]]"
+                      series-id="[[item.data.series]]">
+                    </oj-chart-item>
+                </template>
+            </oj-chart>
+
+            <oj-chart
+              id="areaChart"
+              type="area"
+              class="oj-flex-item"
+              data="[[timeSeriesDataProvider]]"
+              stack="on"
+              animation-on-display="auto"
+              animation-on-data-change="auto"
+              hidden-categories="{{hiddenCategoriesValue}}"
+              legend.rendered="off">
+                <template slot="itemTemplate" data-oj-as="item">
+                    <oj-chart-item
+                      value="[[item.data.value]]"
+                      categories="[[ [item.data.series] ]]"
+                      group-id="[[ [item.data.group] ]]"
+                      series-id="[[item.data.series]]">
+                    </oj-chart-item>
+                </template>
+            </oj-chart>
+        </div>
+        <div class="oj-flex">
+            <oj-chart
+              id="pieChart"
+              type="pie"
+              class="oj-flex-item"
+              data="[[singleGroupDataProvider]]"
+              animation-on-display="auto"
+              animation-on-data-change="auto"
+              hidden-categories="{{hiddenCategoriesValue}}"
+              legend.rendered="off">
+                <template slot="itemTemplate" data-oj-as="item">
+                    <oj-chart-item
+                      value="[[item.data.value]]"
+                      categories="[[ [item.data.series] ]]"
+                      group-id="[[ [item.data.group] ]]"
+                      series-id="[[item.data.series]]">
+                    </oj-chart-item>
+                </template>
+            </oj-chart>
+
+            <oj-chart
+              id="funnelChart"
+              type="funnel"
+              class="oj-flex-item"
+              data="[[singleGroupDataProvider]]"
+              orientation="horizontal"
+              animation-on-display="auto"
+              animation-on-data-change="auto"
+              hidden-categories="{{hiddenCategoriesValue}}"
+              legend.rendered="off">
+                <template slot="itemTemplate" data-oj-as="item">
+                    <oj-chart-item
+                      value="[[item.data.value]]"
+                      categories="[[ [item.data.series] ]]"
+                      group-id="[[ [item.data.group] ]]"
+                      series-id="[[item.data.series]]">
+                    </oj-chart-item>
+                </template>
+            </oj-chart>
+        </div>
+    </div>
+</div>
+
+<!-- JET HTML: End -->
+
+<script src="{{EXTERNAL_BASE_URL}}/method4/resources/require/vanilla-require.js"></script>
