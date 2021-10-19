@@ -13,7 +13,7 @@ npm install -g @oracle/ojet-cli
 ```
 npm install
 ```
-- The npm modules are installed in the `JET` folder and the `ojet restore` in run
+- The npm modules are installed in the `JET` folder and the `ojet restore` is run
 ```
 cd JET
 npm install
