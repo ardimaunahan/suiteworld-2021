@@ -1,5 +1,6 @@
 # Overview
 This SuiteApp contains the codes and objects used in the SuiteWorld 2021 session entitled *"Superpowers for Your SuiteApps How to Use Open Source Libraries"*. Once deployed, a new Center Tab should become available.
+
 ![SuiteWorld Center Tab](docs/new_center_tab.jpg "SuiteWorld Center Tab")
 
 # Prerequisites
